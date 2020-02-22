@@ -1,6 +1,6 @@
 +++
 title = "Announcing Rust library: blit"
-date = 2020-01-06
+date = 2018-01-06
 [taxonomies]
 tags = ["rust", "gamedev", "sprite", "pixels"]
 +++
