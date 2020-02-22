@@ -1,6 +1,8 @@
 +++
 title = "Detect OS with autoconf"
 date = 2016-08-11
+[taxonomies]
+tags = ["c", "autotools"]
 +++
 
 In this (first) blog post based on my [answer](http://stackoverflow.com/a/38899152/1350184) for a Stack Overflow question I'll show you how to detect the _target OS_ in the `configure.ac` or `configure.in` autotools-files. 
