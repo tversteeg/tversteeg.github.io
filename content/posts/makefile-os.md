@@ -1,9 +1,7 @@
----
-title:        "Detect OS with autoconf"
-# jekyll-seo-tag
-description:  ""
-author:       "tversteeg"
----
++++
+title = "Detect OS with autoconf"
+date = 2016-08-11
++++
 
 In this (first) blog post based on my [answer](http://stackoverflow.com/a/38899152/1350184) for a Stack Overflow question I'll show you how to detect the _target OS_ in the `configure.ac` or `configure.in` autotools-files. 
 
@@ -13,9 +11,7 @@ It's important to notice that with target I refer to the target OS when cross-co
 
 Add the following code to your `configure.ac` somewhere between `AC_INIT` and `AC_OUTPUT`:
 
-``` Make
-...
-
+```Makefile
 # AC_CANONICAL_HOST is needed to access the 'host_os' variable    
 AC_CANONICAL_HOST
 
@@ -43,15 +39,11 @@ esac
 AM_CONDITIONAL([BUILD_LINUX], [test "$build_linux" = "yes"])
 AM_CONDITIONAL([BUILD_WIN32], [test "$build_windows" = "yes"])
 AM_CONDITIONAL([BUILD_OSX], [test "$build_mac" = "yes"])
-
-...
 ```
 
 This sets the `BUILD_*` conditionals which we can use in our example `Makefile.am`:
 
-``` Make
-...
-
+```Makefile
 APP_SOURCES = src/main.c
 
 if BUILD_LINUX
@@ -63,6 +55,4 @@ endif
 if BUILD_OSX
 APP_SOURCES += src/osx_dep.c
 endif
-
-...
 ```

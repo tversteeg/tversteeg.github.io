@@ -1,0 +1,29 @@
+base_url = "http://tversteeg.github.io"
+
+title = "Thomas Versteeg"
+
+compile_sass = true
+
+highlight_code = true
+
+build_search_index = true
+
+generate_rss = true
+
+theme = "sam"
+
+taxonomies = [
+    {name = "tags", rss = true}
+]
+
+[extra]
+sam_menu = [
+    { text = "posts", link = "/posts" },
+    { text = "about", link = "/about" },
+    { text = "github", link = "https://github.com/tversteeg" }
+]
+
+sam_bottom_menu = true
+
+show_word_count = true
+show_reading_time = true
