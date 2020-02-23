@@ -19,8 +19,9 @@ taxonomies = [
 [extra]
 sam_menu = [
     { text = "posts", link = "/posts" },
-    { text = "about", link = "/about" },
-    { text = "github", link = "https://github.com/tversteeg" }
+    { text = "whoami", link = "/about" },
+    { text = "github", link = "https://github.com/tversteeg" },
+    { text = "email", link = "mailto:thomasversteeg@gmx.com" }
 ]
 
 sam_bottom_menu = true
