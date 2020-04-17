@@ -18,6 +18,7 @@ taxonomies = [
 
 [extra]
 sam_menu = [
+    { text = "ld46", link = "/ld46" },
     { text = "posts", link = "/posts" },
     { text = "whoami", link = "/about" },
     { text = "github", link = "https://github.com/tversteeg" },
