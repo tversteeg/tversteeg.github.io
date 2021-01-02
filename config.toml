@@ -22,7 +22,7 @@ sam_menu = [
     { text = "posts", link = "/posts" },
     { text = "whoami", link = "/about" },
     { text = "github", link = "https://github.com/tversteeg" },
-    { text = "email", link = "mailto:thomasversteeg@gmx.com" }
+    { text = "email", link = "mailto:t@versteeg.email" }
 ]
 
 sam_bottom_menu = true
