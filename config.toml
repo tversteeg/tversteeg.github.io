@@ -4,8 +4,6 @@ title = "Thomas Versteeg"
 
 compile_sass = true
 
-highlight_code = true
-
 build_search_index = true
 
 generate_rss = true
@@ -15,6 +13,9 @@ theme = "sam"
 taxonomies = [
     {name = "tags", rss = true}
 ]
+
+[markdown]
+highlight_code = true
 
 [extra]
 sam_menu = [
