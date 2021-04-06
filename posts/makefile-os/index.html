@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer">
+
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;tversteeg.nl&#x2F;fonts.css">
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;tversteeg.nl&#x2F;style.css">
+
+        <title>
+    Detect OS with autoconf
+</title>
+
+        
+    </head>
+    <body>
+        
+    <div class="wrap">
+        <div class="section" id="title">
+            
+    Detect OS with autoconf
+
+        </div>
+        <div class="section" id="sections">
+            
+        </div>
+        <div class="section" id="content">
+            
+    
+        
+            
+    
+    11-Aug-2016
+
+        
+        
+            
+                &#183; 177 words
+            
+        
+        
+            
+            
+                &#183; 1 min
+            
+        
+        
+            <div class="tag-container">
+                Tags :&nbsp;
+                
+                    <span class="tag">
+                        <a href="https:&#x2F;&#x2F;tversteeg.nl&#x2F;tags&#x2F;c&#x2F;">
+                            c
+                        </a>
+                    </span>
+                
+                    <span class="tag">
+                        <a href="https:&#x2F;&#x2F;tversteeg.nl&#x2F;tags&#x2F;autotools&#x2F;">
+                            autotools
+                        </a>
+                    </span>
+                
+            </div>
+        
+        
+        <hr/>
+    
+    <p>In this (first) blog post based on my <a href="http://stackoverflow.com/a/38899152/1350184">answer</a> for a Stack Overflow question I'll show you how to detect the <em>target OS</em> in the <code>configure.ac</code> or <code>configure.in</code> autotools-files. </p>
+<p>It's important to notice that with target I refer to the target OS when cross-compiling, for example: you are cross-compiling a Windows <code>bin.exe</code> executable file from GNU/Linux, the target would be Windows.</p>
+<hr />
+<p>Add the following code to your <code>configure.ac</code> somewhere between <code>AC_INIT</code> and <code>AC_OUTPUT</code>:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-Makefile" data-lang="Makefile"><span style="color:#65737e;"># AC_CANONICAL_HOST is needed to access the &#39;host_os&#39; variable    
+</span><span style="color:#bf616a;">AC_CANONICAL_HOST
+
+build_linux</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">no
+</span><span style="color:#bf616a;">build_windows</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">no
+</span><span style="color:#bf616a;">build_mac</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">no
+
+</span><span style="color:#65737e;"># Detect the target system
+</span><span style="color:#c0c5ce;">case &quot;</span><span style="color:#b48ead;">${</span><span style="color:#bf616a;">host_os</span><span style="color:#b48ead;">}</span><span style="color:#c0c5ce;">&quot; in
+    linux*)
+</span><span style="color:#bf616a;">        build_linux</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">yes
+</span><span style="color:#c0c5ce;">        ;;
+    cygwin*|mingw*)
+</span><span style="color:#bf616a;">        build_windows</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">yes
+</span><span style="color:#c0c5ce;">        ;;
+    darwin*)
+</span><span style="color:#bf616a;">        build_mac</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">yes
+</span><span style="color:#c0c5ce;">        ;;
+    *)
+        AC_MSG_ERROR([&quot;OS </span><span style="color:#b48ead;">$</span><span style="color:#bf616a;">h</span><span style="color:#c0c5ce;">ost_os is not supported&quot;])
+        ;;
+esac
+
+</span><span style="color:#65737e;"># Pass the conditionals to automake
+</span><span style="color:#c0c5ce;">AM_CONDITIONAL(</span><span style="color:#bf616a;">[BUILD_LINUX], [test &quot;</span><span style="color:#b48ead;">$</span><span style="color:#bf616a;">build_linux&quot; </span><span style="color:#c0c5ce;">= </span><span style="color:#a3be8c;">&quot;yes&quot;])
+</span><span style="color:#c0c5ce;">AM_CONDITIONAL(</span><span style="color:#bf616a;">[BUILD_WIN32], [test &quot;</span><span style="color:#b48ead;">$</span><span style="color:#bf616a;">build_windows&quot; </span><span style="color:#c0c5ce;">= </span><span style="color:#a3be8c;">&quot;yes&quot;])
+</span><span style="color:#c0c5ce;">AM_CONDITIONAL(</span><span style="color:#bf616a;">[BUILD_OSX], [test &quot;</span><span style="color:#b48ead;">$</span><span style="color:#bf616a;">build_mac&quot; </span><span style="color:#c0c5ce;">= </span><span style="color:#a3be8c;">&quot;yes&quot;])
+</span></code></pre>
+<p>This sets the <code>BUILD_*</code> conditionals which we can use in our example <code>Makefile.am</code>:</p>
+<pre style="background-color:#2b303b;">
+<code class="language-Makefile" data-lang="Makefile"><span style="color:#bf616a;">APP_SOURCES </span><span style="color:#c0c5ce;">= </span><span style="color:#a3be8c;">src/main.c
+
+</span><span style="color:#bf616a;">if BUILD_LINUX
+APP_SOURCES </span><span style="color:#c0c5ce;">+= </span><span style="color:#a3be8c;">src/linux_dep.c
+</span><span style="color:#bf616a;">endif
+if BUILD_WIN32
+APP_SOURCES </span><span style="color:#c0c5ce;">+= </span><span style="color:#a3be8c;">src/win32_dep.c
+</span><span style="color:#bf616a;">endif
+if BUILD_OSX
+APP_SOURCES </span><span style="color:#c0c5ce;">+= </span><span style="color:#a3be8c;">src/osx_dep.c
+</span><span style="color:#b48ead;">endif
+</span></code></pre>
+
+        </div>
+        
+    <div class="section bottom-menu">
+        <hr/>
+        <p>
+            
+                
+                    <a href="&#x2F;ld46">ld46</a>
+                    &#183;
+                
+                    <a href="&#x2F;posts">posts</a>
+                    &#183;
+                
+                    <a href="&#x2F;about">whoami</a>
+                    &#183;
+                
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;tversteeg">github</a>
+                    &#183;
+                
+                    <a href="mailto:t@versteeg.email">email</a>
+                    &#183;
+                
+            
+            <a href="https:&#x2F;&#x2F;tversteeg.nl">
+                home
+            </a>
+        </p>
+    </div>
+
+        
+    
+
+    </div>
+
+    </body>
+</html>
