@@ -5,11 +5,11 @@ date = 2020-03-15
 tags = ["rust", "gamedev", "const", "web", "gui"]
 +++
 
-[Const-tweaker](https://github.com/tversteeg/const-tweaker) is a library I started developing.
+[Const-tweaker](https://github.com/tversteeg/const-tweaker) is a Rust library to change the value of `const` variables during runtime with a web GUI.
+
+<!-- more -->
 
 It's part of a set of tools that can be used to create game engines.
-
-It allows you to create `const` variables that can be adjusted during runtime in a web GUI.
 
 ![Example](https://raw.githubusercontent.com/tversteeg/const-tweaker/master/img/example.gif)
 

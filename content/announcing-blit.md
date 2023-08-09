@@ -5,7 +5,9 @@ date = 2018-01-06
 tags = ["rust", "gamedev", "sprite", "pixels"]
 +++
 
-[Blit](https://github.com/tversteeg/blit) is a library I started developing.
+[Blit](https://github.com/tversteeg/blit) is a Rust library for quickly rendering sprites on an image buffer.
+
+<!-- more -->
 
 It's part of a set of tools that can be used to create game engines.
 

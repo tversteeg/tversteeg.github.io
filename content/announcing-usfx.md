@@ -5,7 +5,9 @@ date = 2020-04-03
 tags = ["rust", "gamedev", "audio", "sfx"]
 +++
 
-[μsfx](https://github.com/tversteeg/usfx) is a library I started developing.
+[μsfx](https://github.com/tversteeg/usfx) is a Rust library for procedurally generating sounds.
+
+<!-- more -->
 
 It's part of a set of tools that can be used to create game engines.
 

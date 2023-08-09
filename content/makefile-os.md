@@ -5,7 +5,9 @@ date = 2016-08-11
 tags = ["c", "autotools"]
 +++
 
-In this (first) blog post based on my [answer](http://stackoverflow.com/a/38899152/1350184) for a Stack Overflow question I'll show you how to detect the _target OS_ in the `configure.ac` or `configure.in` autotools-files. 
+In this post based on my [answer](http://stackoverflow.com/a/38899152/1350184) for a Stack Overflow question I'll show you how to detect the _target OS_ in the `configure.ac` or `configure.in` autotools-files. 
+
+<!-- more -->
 
 It's important to notice that with target I refer to the target OS when cross-compiling, for example: you are cross-compiling a Windows `bin.exe` executable file from GNU/Linux, the target would be Windows.
 

@@ -1,8 +1,6 @@
 +++
 title = "About me"
-
-[extra]
-no_header = true
+date = 2016-08-10
 +++
 
 My name is Thomas Versteeg, I'm a Rust developer and a Linux fan, located in Hilversum, the Netherlands.

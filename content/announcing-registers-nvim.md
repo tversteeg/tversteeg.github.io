@@ -1,11 +1,13 @@
 +++
-title = "Announcing NeoVim plugin: registers.nvim"
+title = "Announcing Neovim plugin: registers.nvim"
 date = 2021-03-11
 [taxonomies]
 tags = ["lua", "neovim", "plugin"]
 +++
 
-[Registers.nvim](https://github.com/tversteeg/registers.nvim) is a NeoVim plugin for previewing the content of registers.
+[Registers.nvim](https://github.com/tversteeg/registers.nvim) is a Neovim plugin for previewing the content of registers.
+
+<!-- more -->
 
 ### Normal Mode
 

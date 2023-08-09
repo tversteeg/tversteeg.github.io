@@ -1,32 +1,31 @@
 base_url = "https://tversteeg.nl"
 
 title = "Thomas Versteeg"
+author = "Thomas Versteeg"
+
+theme = "after-dark"
 
 compile_sass = true
-
-build_search_index = true
-
-generate_rss = true
-
-theme = "sam"
+generate_feed = true
 
 taxonomies = [
-    {name = "tags", rss = true}
+    {name = "tags", feed = true}
 ]
 
 [markdown]
 highlight_code = true
 
 [extra]
-sam_menu = [
-    { text = "ld46", link = "/ld46" },
-    { text = "posts", link = "/posts" },
-    { text = "whoami", link = "/about" },
-    { text = "github", link = "https://github.com/tversteeg" },
-    { text = "email", link = "mailto:t@versteeg.email" }
+after_dark_menu = [
+    { name = "home", url = "$BASE_URL" },
+    { name = "ld46", url = "$BASE_URL/ld46" },
+    { name = "whoami", url = "$BASE_URL/about" },
+    { name = "tags", url = "$BASE_URL/tags" },
+    { name = "github", url = "https://github.com/tversteeg" },
+    { name = "email", url = "mailto:t@versteeg.email" }
 ]
 
-sam_bottom_menu = true
+after_dark_title = "Posts"
 
 show_word_count = true
 show_reading_time = true
