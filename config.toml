@@ -17,11 +17,11 @@ highlight_code = true
 
 [extra]
 after_dark_menu = [
-    { name = "home", url = "$BASE_URL" },
-    { name = "ld46", url = "$BASE_URL/ld46" },
-    { name = "whoami", url = "$BASE_URL/about" },
-    { name = "tags", url = "$BASE_URL/tags" },
+    { name = "home", url = "/" },
+    { name = "whoami", url = "/about" },
+    { name = "tags", url = "/tags" },
     { name = "github", url = "https://github.com/tversteeg" },
+    { name = "itch.io", url = "https://tversteeg.itch.io" },
     { name = "email", url = "mailto:t@versteeg.email" }
 ]
 
