@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Thomas Versteeg - rust</title>
+    <link href="https://tversteeg.nl/tags/rust/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tversteeg.nl"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-04-03T00:00:00+00:00</updated>
+    <id>https://tversteeg.nl/tags/rust/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: usfx</title>
+        <published>2020-04-03T00:00:00+00:00</published>
+        <updated>2020-04-03T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-usfx/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-usfx/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;usfx&quot;&gt;μsfx&lt;&#x2F;a&gt; is a Rust library for procedurally generating sounds.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: const-tweaker</title>
+        <published>2020-03-15T00:00:00+00:00</published>
+        <updated>2020-03-15T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-const-tweaker/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-const-tweaker/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;const-tweaker&quot;&gt;Const-tweaker&lt;&#x2F;a&gt; is a Rust library to change the value of &lt;code&gt;const&lt;&#x2F;code&gt; variables during runtime with a web GUI.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: specs-blit</title>
+        <published>2019-12-29T00:00:00+00:00</published>
+        <updated>2019-12-29T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-specs-blit/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-specs-blit/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;specs-blit&quot;&gt;Specs-blit&lt;&#x2F;a&gt; is a Rust library that exposes my &lt;a href=&quot;https:&#x2F;&#x2F;tversteeg.nl&#x2F;announcing-blit&#x2F;&quot;&gt;blit&lt;&#x2F;a&gt; crates&#x27; functionality in &lt;a href=&quot;https:&#x2F;&#x2F;specs.amethyst.rs&#x2F;&quot;&gt;specs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: blit</title>
+        <published>2018-01-06T00:00:00+00:00</published>
+        <updated>2018-01-06T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-blit/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-blit/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;blit&quot;&gt;Blit&lt;&#x2F;a&gt; is a Rust library for quickly rendering sprites on an image buffer.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

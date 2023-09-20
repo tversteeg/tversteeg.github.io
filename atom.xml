@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Thomas Versteeg</title>
+    <link href="https://tversteeg.nl/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tversteeg.nl"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2021-03-11T00:00:00+00:00</updated>
+    <id>https://tversteeg.nl/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Announcing Neovim plugin: registers.nvim</title>
+        <published>2021-03-11T00:00:00+00:00</published>
+        <updated>2021-03-11T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-registers-nvim/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-registers-nvim/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;registers.nvim&quot;&gt;Registers.nvim&lt;&#x2F;a&gt; is a Neovim plugin for previewing the content of registers.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: usfx</title>
+        <published>2020-04-03T00:00:00+00:00</published>
+        <updated>2020-04-03T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-usfx/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-usfx/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;usfx&quot;&gt;μsfx&lt;&#x2F;a&gt; is a Rust library for procedurally generating sounds.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: const-tweaker</title>
+        <published>2020-03-15T00:00:00+00:00</published>
+        <updated>2020-03-15T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-const-tweaker/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-const-tweaker/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;const-tweaker&quot;&gt;Const-tweaker&lt;&#x2F;a&gt; is a Rust library to change the value of &lt;code&gt;const&lt;&#x2F;code&gt; variables during runtime with a web GUI.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: specs-blit</title>
+        <published>2019-12-29T00:00:00+00:00</published>
+        <updated>2019-12-29T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-specs-blit/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-specs-blit/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;specs-blit&quot;&gt;Specs-blit&lt;&#x2F;a&gt; is a Rust library that exposes my &lt;a href=&quot;https:&#x2F;&#x2F;tversteeg.nl&#x2F;announcing-blit&#x2F;&quot;&gt;blit&lt;&#x2F;a&gt; crates&#x27; functionality in &lt;a href=&quot;https:&#x2F;&#x2F;specs.amethyst.rs&#x2F;&quot;&gt;specs&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: blit</title>
+        <published>2018-01-06T00:00:00+00:00</published>
+        <updated>2018-01-06T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-blit/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-blit/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;blit&quot;&gt;Blit&lt;&#x2F;a&gt; is a Rust library for quickly rendering sprites on an image buffer.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Detect OS with autoconf</title>
+        <published>2016-08-11T00:00:00+00:00</published>
+        <updated>2016-08-11T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/makefile-os/" type="text/html"/>
+        <id>https://tversteeg.nl/makefile-os/</id>
+        
+        <summary type="html">&lt;p&gt;In this post based on my &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;38899152&#x2F;1350184&quot;&gt;answer&lt;&#x2F;a&gt; for a Stack Overflow question I&#x27;ll show you how to detect the &lt;em&gt;target OS&lt;&#x2F;em&gt; in the &lt;code&gt;configure.ac&lt;&#x2F;code&gt; or &lt;code&gt;configure.in&lt;&#x2F;code&gt; autotools-files. &lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>About me</title>
+        <published>2016-08-10T00:00:00+00:00</published>
+        <updated>2016-08-10T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/about/" type="text/html"/>
+        <id>https://tversteeg.nl/about/</id>
+        
+        <content type="html">&lt;p&gt;My name is Thomas Versteeg, I&#x27;m a Rust developer and a Linux fan, located in Hilversum, the Netherlands.
+My text editor of choice is &lt;del&gt;NeoVim&lt;&#x2F;del&gt; Helix. The distro I&#x27;ve been using for at least 10 years is Debian.&lt;&#x2F;p&gt;
+&lt;p&gt;My interests around computer science are wide and include graphics, compiler&#x2F;programming language design, artificial intelligence and systems programming.&lt;&#x2F;p&gt;
+&lt;p&gt;I am an open source enthusiast, I have a big library of projects and tools I&#x27;ve made over the years.&lt;&#x2F;p&gt;
+&lt;p&gt;In my spare time I like to swim, play badminton, travel &amp;amp; cook vegan food.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&quot;&gt;github&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;1350184&#x2F;tversteeg&quot;&gt;stack overflow&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;tversteeg.itch.io&#x2F;&quot;&gt;itch.io&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

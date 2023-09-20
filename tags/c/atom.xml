@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Thomas Versteeg - c</title>
+    <link href="https://tversteeg.nl/tags/c/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tversteeg.nl"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2016-08-11T00:00:00+00:00</updated>
+    <id>https://tversteeg.nl/tags/c/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Detect OS with autoconf</title>
+        <published>2016-08-11T00:00:00+00:00</published>
+        <updated>2016-08-11T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/makefile-os/" type="text/html"/>
+        <id>https://tversteeg.nl/makefile-os/</id>
+        
+        <summary type="html">&lt;p&gt;In this post based on my &lt;a href=&quot;http:&#x2F;&#x2F;stackoverflow.com&#x2F;a&#x2F;38899152&#x2F;1350184&quot;&gt;answer&lt;&#x2F;a&gt; for a Stack Overflow question I&#x27;ll show you how to detect the &lt;em&gt;target OS&lt;&#x2F;em&gt; in the &lt;code&gt;configure.ac&lt;&#x2F;code&gt; or &lt;code&gt;configure.in&lt;&#x2F;code&gt; autotools-files. &lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

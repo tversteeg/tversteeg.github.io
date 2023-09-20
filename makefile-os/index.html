@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+      
+    
+
+      <title>Thomas Versteeg</title>
+
+      
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="https://tversteeg.nl/atom.xml">
+      
+
+      
+          <link rel="stylesheet" href="https://tversteeg.nl/site.css">
+      
+
+      
+      
+    </head>
+
+    <body class="hack dark main container">
+        
+    
+        
+                
+                    <header>
+                        <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="/">
+                                <span itemprop="name">home</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="/about">
+                                <span itemprop="name">whoami</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="/tags">
+                                <span itemprop="name">tags</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://github.com/tversteeg">
+                                <span itemprop="name">github</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="https://tversteeg.itch.io">
+                                <span itemprop="name">itch.io</span></a>
+                        
+                            <a itemprop="url"
+                               class=""
+                               href="mailto:t@versteeg.email">
+                                <span itemprop="name">email</span></a>
+                        
+                        </nav>
+                    </header>
+                
+            
+    
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">Detect OS with autoconf</h1>
+        <span class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <span>1 minute read</span>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
+    Published: 2016-08-11
+</span>
+    </header>
+    <div itemprop="articleBody">
+      <p>In this post based on my <a href="http://stackoverflow.com/a/38899152/1350184">answer</a> for a Stack Overflow question I'll show you how to detect the <em>target OS</em> in the <code>configure.ac</code> or <code>configure.in</code> autotools-files. </p>
+<span id="continue-reading"></span>
+<p>It's important to notice that with target I refer to the target OS when cross-compiling, for example: you are cross-compiling a Windows <code>bin.exe</code> executable file from GNU/Linux, the target would be Windows.</p>
+<hr />
+<p>Add the following code to your <code>configure.ac</code> somewhere between <code>AC_INIT</code> and <code>AC_OUTPUT</code>:</p>
+<pre data-lang="Makefile" style="background-color:#2b303b;color:#c0c5ce;" class="language-Makefile "><code class="language-Makefile" data-lang="Makefile"><span style="color:#65737e;"># AC_CANONICAL_HOST is needed to access the &#39;host_os&#39; variable    
+</span><span>AC_CANONICAL_HOST
+</span><span>
+</span><span style="color:#bf616a;">build_linux</span><span>=</span><span style="color:#a3be8c;">no
+</span><span style="color:#bf616a;">build_windows</span><span>=</span><span style="color:#a3be8c;">no
+</span><span style="color:#bf616a;">build_mac</span><span>=</span><span style="color:#a3be8c;">no
+</span><span>
+</span><span style="color:#65737e;"># Detect the target system
+</span><span>case &quot;</span><span style="color:#b48ead;">${</span><span style="color:#bf616a;">host_os</span><span style="color:#b48ead;">}</span><span>&quot; in
+</span><span>    linux*)
+</span><span style="color:#bf616a;">        build_linux</span><span>=</span><span style="color:#a3be8c;">yes
+</span><span>        ;;
+</span><span>    cygwin*|mingw*)
+</span><span style="color:#bf616a;">        build_windows</span><span>=</span><span style="color:#a3be8c;">yes
+</span><span>        ;;
+</span><span>    darwin*)
+</span><span style="color:#bf616a;">        build_mac</span><span>=</span><span style="color:#a3be8c;">yes
+</span><span>        ;;
+</span><span>    *)
+</span><span>        AC_MSG_ERROR([&quot;OS </span><span style="color:#b48ead;">$</span><span style="color:#bf616a;">h</span><span>ost_os is not supported&quot;])
+</span><span>        ;;
+</span><span>esac
+</span><span>
+</span><span style="color:#65737e;"># Pass the conditionals to automake
+</span><span>AM_CONDITIONAL(</span><span style="color:#bf616a;">[BUILD_LINUX], [test &quot;</span><span style="color:#b48ead;">$</span><span style="color:#bf616a;">build_linux&quot; </span><span>= </span><span style="color:#a3be8c;">&quot;yes&quot;])
+</span><span>AM_CONDITIONAL(</span><span style="color:#bf616a;">[BUILD_WIN32], [test &quot;</span><span style="color:#b48ead;">$</span><span style="color:#bf616a;">build_windows&quot; </span><span>= </span><span style="color:#a3be8c;">&quot;yes&quot;])
+</span><span>AM_CONDITIONAL(</span><span style="color:#bf616a;">[BUILD_OSX], [test &quot;</span><span style="color:#b48ead;">$</span><span style="color:#bf616a;">build_mac&quot; </span><span>= </span><span style="color:#a3be8c;">&quot;yes&quot;])
+</span></code></pre>
+<p>This sets the <code>BUILD_*</code> conditionals which we can use in our example <code>Makefile.am</code>:</p>
+<pre data-lang="Makefile" style="background-color:#2b303b;color:#c0c5ce;" class="language-Makefile "><code class="language-Makefile" data-lang="Makefile"><span style="color:#bf616a;">APP_SOURCES </span><span>= </span><span style="color:#a3be8c;">src/main.c
+</span><span>
+</span><span>if BUILD_LINUX
+</span><span style="color:#bf616a;">APP_SOURCES </span><span>+= </span><span style="color:#a3be8c;">src/linux_dep.c
+</span><span style="color:#b48ead;">endif
+</span><span>if BUILD_WIN32
+</span><span style="color:#bf616a;">APP_SOURCES </span><span>+= </span><span style="color:#a3be8c;">src/win32_dep.c
+</span><span style="color:#b48ead;">endif
+</span><span>if BUILD_OSX
+</span><span style="color:#bf616a;">APP_SOURCES </span><span>+= </span><span style="color:#a3be8c;">src/osx_dep.c
+</span><span style="color:#b48ead;">endif
+</span></code></pre>
+
+    </div>
+
+    
+        <footer>
+            <hr>
+            <p>
+                
+                
+                
+                    
+                    tagged
+                    
+                        <a href="https://tversteeg.nl/tags/c/">c</a>
+                        
+                            
+                                
+                                    and
+                                
+                            
+                        
+                    
+                        <a href="https://tversteeg.nl/tags/autotools/">autotools</a>
+                        
+                            
+                        
+                    
+                
+            </p>
+            
+            
+        </footer>
+    
+</article>
+
+
+    </body>
+
+</html>

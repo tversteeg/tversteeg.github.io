@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Thomas Versteeg - lua</title>
+    <link href="https://tversteeg.nl/tags/lua/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tversteeg.nl"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2021-03-11T00:00:00+00:00</updated>
+    <id>https://tversteeg.nl/tags/lua/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Announcing Neovim plugin: registers.nvim</title>
+        <published>2021-03-11T00:00:00+00:00</published>
+        <updated>2021-03-11T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-registers-nvim/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-registers-nvim/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;registers.nvim&quot;&gt;Registers.nvim&lt;&#x2F;a&gt; is a Neovim plugin for previewing the content of registers.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

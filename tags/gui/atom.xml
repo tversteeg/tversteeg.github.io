@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Thomas Versteeg - gui</title>
+    <link href="https://tversteeg.nl/tags/gui/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tversteeg.nl"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-03-15T00:00:00+00:00</updated>
+    <id>https://tversteeg.nl/tags/gui/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: const-tweaker</title>
+        <published>2020-03-15T00:00:00+00:00</published>
+        <updated>2020-03-15T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-const-tweaker/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-const-tweaker/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;const-tweaker&quot;&gt;Const-tweaker&lt;&#x2F;a&gt; is a Rust library to change the value of &lt;code&gt;const&lt;&#x2F;code&gt; variables during runtime with a web GUI.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>

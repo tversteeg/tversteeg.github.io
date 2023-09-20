@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Thomas Versteeg - audio</title>
+    <link href="https://tversteeg.nl/tags/audio/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://tversteeg.nl"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2020-04-03T00:00:00+00:00</updated>
+    <id>https://tversteeg.nl/tags/audio/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Announcing Rust library: usfx</title>
+        <published>2020-04-03T00:00:00+00:00</published>
+        <updated>2020-04-03T00:00:00+00:00</updated>
+        <author>
+          <name>Thomas Versteeg</name>
+        </author>
+        <link rel="alternate" href="https://tversteeg.nl/announcing-usfx/" type="text/html"/>
+        <id>https://tversteeg.nl/announcing-usfx/</id>
+        
+        <summary type="html">&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;tversteeg&#x2F;usfx&quot;&gt;μsfx&lt;&#x2F;a&gt; is a Rust library for procedurally generating sounds.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>
